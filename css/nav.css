@@ -1,6 +1,8 @@
 nav {
   margin-top: -45px;
-  background: #f9f9f9;
+  margin-left: -8px;
+  margin-right: -8px;
+  background: #2f5061;
   padding: 16px;
 }
 nav .menuItems {
@@ -13,7 +15,7 @@ nav .menuItems li {
 }
 nav .menuItems li a {
   text-decoration: none;
-  color: #8f8f8f;
+  color: white;
   font-size: 24px;
   font-weight: 400;
   transition: all 0.5s ease-in-out;
@@ -23,7 +25,7 @@ nav .menuItems li a {
 nav .menuItems li a::before {
   content: attr(data-item);
   transition: 0.5s;
-  color: #8254ff;
+  color: #e57f84;
   position: absolute;
   top: 0;
   bottom: 0;
