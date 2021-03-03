@@ -11,5 +11,12 @@ HOMEPAGE: DL
 
 Hi this change is made by Atishay Jain
 
-COLOUR CODE: #BFC3BA	#A9ACA9		#60495A		#3F3244		#2F2235 (only use this colour code in whole project)
 DL: DECIDE LATER
+
+COLOUR CODE
+
+Baby Blue     Blue Green        Blue Grotto        Navy Blue
+#d4f1f4        #75e6da             #189ab4          #05445e
+
+Misty Blue       Coral            Ivory		       Teal Green
+#2f5061         #e57f84          #f4eae6            #4297a0
