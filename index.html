@@ -4,14 +4,26 @@
 	<title>Ex-Co</title>
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<style type="text/css">
 		@font-face {
   			font-family: exco;
   			src: url(fontFiles/Revamped.ttf);
 		}
+		@font-face {
+  			font-family: money;
+  			src: url(fontFiles/Money.ttf);
+		}
+		@font-face {
+  			font-family: RocknRoll;
+  			src: url(fontFiles/RocknRoll.ttf);
+		}
+		body{
+			overflow-x: hidden;
+		}
 	</style>
 </head>
-<body style="background-color: white;">
+<body style="background-color: #f4eae6;">
 <header>
 		<p align="middle">
 		<img src="assets/headImg1.png" width="8%" style="vertical-align:middle;float:left;">
@@ -20,17 +32,22 @@
 		<span class="logoA">-C</span>
 		<span class="logoB">o</span>
 		<img src="assets/headImg1.png" width="8%" style="vertical-align:middle;float:right;"></p>
-		<hr><br><br>
+		<br><br>
 </header>
 <nav>
   <ul class="menuItems">
-    <li><a href='#' data-item='HOME'>HOME</a></li>
-    <li><a href='#' data-item='INCOME/EXPENSE'>INCOME/EXPENSE</a></li>
+    <li><a href='index.html' data-item='HOME'>HOME</a></li>
     <li><a href='#' data-item='DASHBOARD'>DASHBOARD</a></li>
-    <li><a href='#' data-item='LOGIN'>LOGIN</a></li>
+    <li><a href='data_feed.html' data-item='INCOME/EXPENSE'>INCOME/EXPENSE</a></li>
+    <li><a href='login.html' data-item='LOGIN'>LOGIN</a></li>
     <li><a href='#' data-item='REGISTER'>REGISTER</a></li>
   </ul>
 </nav>
-
+<div class="div1">
+	<h1 style="text-align: center;" class="st1">EXPENSE CONTROLLER SYSTEM</h1>
+	<p class="ps1">Expense Controller System is a system which will keep a track of Income-Expense of a House on a day to day basics, This System takes Income from House and divides in daily expense allowed, If u exceed that days expense it will cut if from your income and give new daily expense allowed amount, and if that days expense is less it will add it in savings. Expense Controller System will generate report at the end of month to show Income-Expense Curve. It will let you add the savings amount which you had saved for some particular Festivals or day like Birthday or Anniversary.</p>
+	<p style="text-align: center;"><button class="button"><span>Sign Up </span></button></p>
+</div>
+<img src="assets/test.svg" width="48%" style="float: right; overflow: hidden;">
 </body>
 </html>
