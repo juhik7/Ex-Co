@@ -4,13 +4,18 @@ body{
     background-size: cover;
     background-position: center;
 }
+.fieldset{
+    color: 
+    
 
-.sign_in{
-    width: 360px;
-    padding: 10% 0 0;
-    margin: auto;
 }
+td{
+    border-top-style: 
+}
+p{
+    font-size: 20%;
 
+}
 .form{
     position: relative;
     z-index: 1;
