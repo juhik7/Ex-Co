@@ -5,8 +5,17 @@
     <link rel="stylesheet" href="log_in.css"></link>
 </head>
 <body>
-    
-    <div class="sign_in">
+<fieldset class="fieldset">    
+    <h1></h1>
+    <table>
+        <tr>
+            <th><input type="text" name="email" id="email" placeholder="type your email_id"/>
+                <td><a href="">Sign Up</a></td>
+            </th>
+        </tr>
+    </table>
+    <p>By signing up I agree to the<span style="color: blue">Terms of Use</span></p>
+</fieldset>
         <div class="form"> 
             <form class="register-form" name="frmContact" method="" action="">
                 <input type="number" name="ID" id="ID" placeholder="ID"/>
@@ -18,24 +27,6 @@
                 <button name="create" id="create"> Create  </button>
                 <p class="message"> Already Registered? <a href="#"> sign in </a></p>
             </form>
-
-            <form class="sign_up">
-                <input type="text" name="name" id="name" placeholder=" user name"/>
-                <input type="password" name="password2" id="password2" placeholder="password"/>
-                <button name="sign_up" id="sign_up"> sign_up </button>
-                <p class="message"> Not Registered? <a href="#"> Register </a></p>
-            </form>
-
         </div>
-    </div>
- <script src='https://code.jquery.com/jquery-3.5.1.min.js'>
-</script>
-
-<script>
-    $('.message a').click(function(){
-        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-    });
-</script>
-
 </body>
 </html>
