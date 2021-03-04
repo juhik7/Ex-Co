@@ -1,70 +1,51 @@
-body{
-    background: #8f1954;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-.fieldset{
-    color: 
-    
-
-}
-td{
-    border-top-style: 
-}
-p{
-    font-size: 20%;
-
-}
-.form{
-    position: relative;
-    z-index: 1;
-    background: rgba(5, 7, 14, 0.904);
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
-    text-align: center;
-}
-
-.form input{
-    font-family: "Roboto",sans-serif;
-    outline: 1;
-    background: #9ce4da;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    font-size: 14px;
-}
-
-.form button{
-    font-family: "Roboto",sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #d8456a;
-    width: 100%;
-    border:0;
-    padding: 15px;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.form button:hover,.form button:active{
-    background: #43A047;
-}
-
-.form .message{
-    margin: 15px 0 0;
-    color: aliceblue;
-    font-size: 12px;
-}
-
-.form .message a{
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.form .register-form{
-    display: none;
-}
+body{  
+  font-family: sans-serif;  
+  background-color:#d4f1f4;  
+}  
+.container {  
+    padding: 50px;  
+  background-color:#75e6da ;  
+}  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color:  #05445e;  
+  outline: none;  
+}  
+div {  
+  padding: 10px 0;  
+}  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  text-align: center;
+  border-radius: 5px;  
+  border: none;  
+  cursor: pointer;  
+  padding: 16px 30px;  
+  width: 50%;
+}  
+.registerbtn:hover {  
+    background-color: black;
+    color: white; 
+}  
+.login{
+  text-align: center;
+  border-radius: 5px;  
+  border: none;  
+  cursor: pointer;  
+  padding: 16px 30px;  
+  width: 50%;
+}  
+.login:hover {  
+    background-color: black;
+    color: white; 
+}  
