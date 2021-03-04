@@ -1,0 +1,10 @@
+.money{
+  font-family: money;
+  color: green;
+  font-size: 80px;
+}
+.heading{
+  font-family: dollarBill;
+  color: black;
+  font-size: 50px;
+}
