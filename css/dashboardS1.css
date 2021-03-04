@@ -1,0 +1,67 @@
+.sidebar{
+  width: 25%;
+  margin-top: 30px;
+  border-right: 2px solid black;
+  padding-top: 20px;
+  margin-left: -10px;
+  display: inline-block;
+}
+.svg-wrapper {
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #4297a0;
+}
+
+.text {
+  color: black;
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  text-align: center;
+  top: -48px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+
+.trans{
+  background: transparent;
+  border: none !important;
+  text-align: center;
+}
+.frame{
+  float: right;
+  display: inline-block;
+  width: 75%;
+  margin-top: 30px;
+}

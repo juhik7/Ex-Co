@@ -4,6 +4,9 @@
 	<title>Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/dashboardS1.css">
+	<script src="javascript/dashboard.js"></script>
 	<style type="text/css">
 		@font-face {
   			font-family: exco;
@@ -23,25 +26,53 @@
 	</style>
 </head>
 <body style="background-color: #f4eae6;">
-<header>
-	<p align="middle">
-	<img src="assets/headImg1.png" width="8%" style="vertical-align:middle;float:left;">
-	<span class="logoA">E</span>
-	<span class="logoB">x</span>
-	<span class="logoA">-C</span>
-	<span class="logoB">o</span>
-	<img src="assets/headImg1.png" width="8%" style="vertical-align:middle;float:right;"></p>
-	<br><br><br>
-</header>
-<nav>
-  <ul class="menuItems">
-    <li><a href='index.html' data-item='HOME'>HOME</a></li>
-    <li><a href='dashboard.html' data-item='DASHBOARD'>DASHBOARD</a></li>
-    <li><a href='data_feed.html' data-item='INCOME/EXPENSE'>INCOME/EXPENSE</a></li>
-    <li><a href='login.html' data-item='LOGIN'>LOGIN</a></li>
-    <li><a href='register.html' data-item='REGISTER'>REGISTER</a></li>
-  </ul>
-</nav>
-
+	<header>
+		<p align="middle">
+		<img src="assets/headImg1.png" width="8%" style="vertical-align:middle;float:left;">
+		<span class="logoA">E</span>
+		<span class="logoB">x</span>
+		<span class="logoA">-C</span>
+		<span class="logoB">o</span>
+		<img src="assets/headImg1.png" width="8%" style="vertical-align:middle;float:right;"></p>
+		<br><br><br>
+	</header>
+	<nav>
+	  <ul class="menuItems">
+	    <li><a href='index.html' data-item='HOME'>HOME</a></li>
+	    <li><a href='dashboard.html' data-item='DASHBOARD'>DASHBOARD</a></li>
+	    <li><a href='data_feed.html' data-item='INCOME/EXPENSE'>INCOME/EXPENSE</a></li>
+	    <li><a href='login.html' data-item='LOGIN'>LOGIN</a></li>
+	    <li><a href='register.html' data-item='REGISTER'>REGISTER</a></li>
+	  </ul>
+	</nav>
+	<aside class="sidebar">
+		<div class="svg-wrapper">
+  			<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    			<rect id="budgetBut"class="shape" height="60" width="320" />
+  			</svg>
+   				<button class="trans" onclick="budget()"><div class="text">BUDGET</div></button>
+		</div>
+		<div class="svg-wrapper">
+  			<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    			<rect class="shape" height="60" width="320" />
+  			</svg>
+   				<button class="trans" onclick="income()"><div class="text">INCOME</div></button>
+		</div>
+		<div class="svg-wrapper">
+  			<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    			<rect class="shape" height="60" width="320" />
+  			</svg>
+   				<button class="trans" onclick="expense()"><div class="text">EXPENSE</div></button>
+		</div>
+		<div class="svg-wrapper">
+  			<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    			<rect class="shape" height="60" width="320" />
+  			</svg>
+  				<button class="trans" onclick="savings()"><div class="text">SAVINGS</div></button>
+		</div>
+	</aside>
+	<div class="frame">
+		<iframe src="about:blank" height=500px width=100% frameBorder="0" id="display" scrolling="no"></iframe>
+	</div>
 </body>
 </html>
