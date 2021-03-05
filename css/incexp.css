@@ -112,6 +112,10 @@
   background-image: linear-gradient(#f0a3a3, #f42323);
 }
 
+.teal > span {
+  background-image: linear-gradient(#d4f1f4, #189ab4);
+}
+
 .nostripes > span > span,
 .nostripes > span::after {
   background-image: none;
