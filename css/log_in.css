@@ -6,6 +6,13 @@ body{
     padding: 50px;  
   background-color:#75e6da ;  
 }  
+.form{
+  max-width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+}
 input[type=text], input[type=password], textarea {  
   width: 100%;  
   padding: 15px;  
@@ -15,7 +22,7 @@ input[type=text], input[type=password], textarea {
   background: #f1f1f1;  
 }  
 input[type=text]:focus, input[type=password]:focus {  
-  background-color:  #05445e;  
+  background-color:   #f2e6ff;  
   outline: none;  
 }  
 div {  
@@ -26,17 +33,16 @@ hr {
   margin-bottom: 25px;  
 }  
 .registerbtn {  
-  text-align: center;
-  border-radius: 5px;  
-  border: none;  
-  cursor: pointer;  
-  padding: 16px 30px;  
-  width: 50%;
+  padding: 12px 30px;
+  border: 0;
+  background: linear-gradient(to right, #de48b5 0%,#0097ff 100%); 
+  border-radius: 3px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 0 auto;
+
 }  
-.registerbtn:hover {  
-    background-color: black;
-    color: white; 
-}  
+
 .login{
   text-align: center;
   border-radius: 5px;  
