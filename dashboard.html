@@ -23,7 +23,7 @@
 		}
 		body{
 			overflow-x: hidden;
-			overflow-y: hidden;
+			/*overflow-y: hidden;*/
 		}
 	</style>
 </head>
@@ -48,29 +48,38 @@
 	  </ul>
 	</nav>
 	<aside class="sidebar">
+		
 		<div class="svg-wrapper">
+			<button class="trans" onclick="budget()">
   			<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
     			<rect id="budgetBut"class="shape" height="60" width="320" />
   			</svg>
-   				<button class="trans" onclick="budget()"><div class="text">BUDGET</div></button>
+   				<div class="text">BUDGET</div>
+   			</button>
 		</div>
 		<div class="svg-wrapper">
+			<button class="trans" onclick="income()">
   			<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
     			<rect class="shape" height="60" width="320" />
   			</svg>
-   				<button class="trans" onclick="income()"><div class="text">INCOME</div></button>
+   				<div class="text">INCOME</div>
+   			</button>
 		</div>
 		<div class="svg-wrapper">
+			<button class="trans" onclick="expense()">
   			<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
     			<rect class="shape" height="60" width="320" />
   			</svg>
-   				<button class="trans" onclick="expense()"><div class="text">EXPENSE</div></button>
+   				<div class="text">EXPENSE</div>
+   			</button>
 		</div>
 		<div class="svg-wrapper">
+			<button class="trans" onclick="savings()">
   			<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
     			<rect class="shape" height="60" width="320" />
   			</svg>
-  				<button class="trans" onclick="savings()"><div class="text">SAVINGS</div></button>
+  				<div class="text">SAVINGS</div>
+  			</button>
 		</div>
 	</aside>
 	<div class="frame">

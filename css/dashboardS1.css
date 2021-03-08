@@ -58,6 +58,10 @@
   background: transparent;
   border: none !important;
   text-align: center;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  width: 320px;
+  height: 60px;
 }
 .frame{
   float: right;
