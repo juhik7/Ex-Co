@@ -44,8 +44,8 @@
     <li><a href='register.html' data-item='REGISTER'>REGISTER</a></li>
   </ul>
 </nav>
-<form>  
   <div class="container">  
+<form class="form">  
   <center>  <h1> EX-CO Registeration Form</h1> </center>  
   <hr>  
 <label> Firstname </label>   
@@ -54,11 +54,14 @@
 <input type="text" name="middlename" placeholder="Middlename" size="15" required />   
 <label> Lastname: </label>    
 <input type="text" name="lastname" placeholder="Lastname" size="15"required />   
-<label> Gender :</label>
+<label> Gender :
 <input type="radio" value="Male" name="gender" checked > Male   
 <input type="radio" value="Female" name="gender"> Female   
 <input type="radio" value="Other" name="gender"> Other  
-<br>
+</label><br>
+<label> Type: 
+<input type="radio" value="adult" name="type" checked > Adult <span style="color: red;">25+</span><input type="radio" value="kids" name="type"> Kids  
+</label><br> 
 <label> Phone : </label> 
 <input type="text" name="phone" placeholder="phone no." size="10"/ required>   
 <label>Current Address :</label>  
@@ -70,9 +73,6 @@
 <input type="password" placeholder="Enter Password" name="psw" required>  
 <label for="psw-repeat">Re-type Password</label>  
 <input type="password" placeholder="Retype Password" name="psw-repeat" required>  
-<label> Type: </label>  
-<input type="radio" value="adult" name="type" checked > Adult <span style="color: red;">25+</span><input type="radio" value="kids" name="type"> Kids  
-<br> 
 <button type="submit" class="registerbtn">Register</button>    
 </div></form>
 </body>
