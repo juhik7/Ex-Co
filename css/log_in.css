@@ -2,20 +2,39 @@ body{
   font-family: sans-serif;  
   background-color:#d4f1f4;  
 }  
+#box_making { 
+      display: inline-block;
+  width: 45%;
+  float: left;
+  margin-top: 40px;
+  padding: 10px;
+  border: 4px solid black;
+  border-radius: 20px;
+  
+        } 
 .container {  
     padding: 50px;  
   background-color:#75e6da ;  
 }  
+.form{
+  max-width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
 input[type=text], input[type=password], textarea {  
   width: 100%;  
   padding: 15px;  
   margin: 5px 0 22px 0;  
-  display: inline-block;  
-  border: none;  
+  display: inline-block;
+  border: none; 
+  border-style: outset;
   background: #f1f1f1;  
 }  
 input[type=text]:focus, input[type=password]:focus {  
-  background-color:  #05445e;  
+  background-color:   #f2e6ff;  
   outline: none;  
 }  
 div {  
@@ -26,26 +45,30 @@ hr {
   margin-bottom: 25px;  
 }  
 .registerbtn {  
-  text-align: center;
-  border-radius: 5px;  
-  border: none;  
-  cursor: pointer;  
-  padding: 16px 30px;  
-  width: 50%;
+  padding: 12px 30px;
+  border: 0;
+  background: linear-gradient(to right, #de48b5 0%,#0097ff 100%); 
+  border-radius: 3px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 0 auto;
 }  
-.registerbtn:hover {  
-    background-color: black;
-    color: white; 
-}  
+.form_log_in{
+  max-width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 .login{
-  text-align: center;
-  border-radius: 5px;  
-  border: none;  
-  cursor: pointer;  
-  padding: 16px 30px;  
-  width: 50%;
+  padding: 12px 30px;
+  border: 0;
+  background: linear-gradient(to right, #de48b5 0%,#0097ff 100%); 
+  border-radius: 3px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 0 auto;
 }  
 .login:hover {  
-    background-color: black;
-    color: white; 
+  background-color: black;
+  color: white; 
 }  

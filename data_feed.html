@@ -21,6 +21,7 @@
 		body{
 			overflow-x: hidden;
 		}
+
 	</style>
 </head>
 <body style="background-color: #f4eae6;">
@@ -45,23 +46,53 @@
 	</nav>
 	<div class="income">
 			<form>
+				<div class="container">  
 				<fieldset><legend>Add Income</legend>
-					<label for="field1"><span>Transaction Id <span class="required">*</span></span><input type="number" class="input-field" name="field1" value="" /></label>
-					<label for="field2"><span>UID <span class="required">*</span></span><input type="number" class="input-field" name="field2" value="" /></label>
-					<label for="field3"><span>Amount <span class="required">*</span></span><input type="number" class="input-field" name="field3" value="" /></label>
-					<label for="field4"><span>Source <span class="reuired">*</span></span><input type="text" class="input-field" name="field4" value=""/></label>
-					<label><span> </span><input type="submit" value="Submit" /></label>
+				<table width="500" border="0" cellspacing="0" cellpadding="0">
+					<th></th>
+					<tr>
+					<td><label> Transcation Id </label><br><br></td>
+					<td><input type="number" name="transactionid" size="15" required /></td>
+					</tr>
+					<tr>
+					<td><label> UID </label></td>
+					<td><input type="number" name="uid" size="15" required /><br></br></td>
+					</tr>
+					<tr>
+					<td><label> Amount </label></td>
+					<td><input type="number" name="amount" size="15" required /><br></br></td>
+					<tr>
+					<td><label> Source </label></td>
+					<td><input type="text" name="source" size="15" required /><br></br></td>
+					</tr>
+				</table>
+					<label><span> </span><input type="submit" value="Submit" /></label><br></br>
+					
 				</fieldset>
 			</form>
 	</div>
 	<div class="expense">
 		<form class="expense">
 			<fieldset><legend>Add Expense</legend>
-				<label for="field1"><span>Transaction Id <span class="required">*</span></span><input type="number" class="input-field" name="field1" value="" /></label>
-				<label for="field2"><span>UID <span class="required">*</span></span><input type="number" class="input-field" name="field2" value="" /></label>
-				<label for="field3"><span>Amount <span class="required">*</span></span><input type="number" class="input-field" name="field3" value="" /></label>
-				<label for="field4"><span>Source <span class="reuired">*</span></span><input type="text" class="input-field" name="field4" value=""/></label>
-				<label><span> </span><input type="submit" value="Submit" /></label>
+				<table width="500" border="0" cellspacing="0" cellpadding="0">
+					<th></th>
+					<tr>
+					<td><label> Transcation Id </label><br><br></td>
+					<td><input type="number" name="transactionid" size="15" required /></td>
+					</tr>
+					<tr>
+					<td><label> UID </label></td>
+					<td><input type="number" name="uid" size="15" required /><br></br></td>
+					</tr>
+					<tr>
+					<td><label> Amount </label></td>
+					<td><input type="number" name="amount" size="15" required /><br></br></td>
+					<tr>
+					<td><label> Source </label></td>
+					<td><input type="text" name="source" size="15" required /><br></br></td>
+					</tr>
+				</table>
+					<label><span> </span><input type="submit" value="Submit" /></label><br></br>
 			</fieldset>
 		</form>
 	</div>
