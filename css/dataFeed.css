@@ -1,0 +1,17 @@
+.incomeAdd{
+	width: 49%;
+	display: inline-block;
+}
+.expenseAdd{
+	width: 49%;
+	display: inline-block;
+}
+
+.main{
+	margin-top: 50px;
+}
+
+.incTable{
+	text-align: center;
+	align-content: center;
+}

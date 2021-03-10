@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/dataFeed.css">
+	<script src="javascript/dataFeed.js"></script>
 	<style type="text/css">
 		@font-face {
   			font-family: exco;
@@ -44,57 +46,59 @@
 	    <li><a href='register.html' data-item='REGISTER'>REGISTER</a></li>
 	  </ul>
 	</nav>
-	<div class="income">
+	<main class="main">
+		<div class="incomeAdd">
 			<form>
-				<div class="container">  
-				<fieldset><legend>Add Income</legend>
-				<table width="500" border="0" cellspacing="0" cellpadding="0">
-					<th></th>
-					<tr>
-					<td><label> Transcation Id </label><br><br></td>
-					<td><input type="number" name="transactionid" size="15" required /></td>
-					</tr>
-					<tr>
-					<td><label> UID </label></td>
-					<td><input type="number" name="uid" size="15" required /><br></br></td>
-					</tr>
-					<tr>
-					<td><label> Amount </label></td>
-					<td><input type="number" name="amount" size="15" required /><br></br></td>
-					<tr>
-					<td><label> Source </label></td>
-					<td><input type="text" name="source" size="15" required /><br></br></td>
-					</tr>
-				</table>
-					<label><span> </span><input type="submit" value="Submit" /></label><br></br>
-					
+				<fieldset>
+				  	<table>
+					    <legend>Add Income</legend>
+					    <tr>
+					    	<th><label for="inc">Income:</label></th>
+					    	<td><input type="number" id="inc" name="inc"></td>
+						</tr>
+						<tr>
+					    	<th><label for="date">Date:</label></th>
+					    	<td><input type="date" id='date' name='date' onload="getDate()"></td>
+					    </tr>
+					    <tr>
+					    	<th><label for="source">Source:</label></th>
+					    	<td><input type="text" id="source" name="source"></td>
+					    </tr>
+					    <tr>
+					    	<th><label for="remark">Remark:</label></th>
+					    	<td><textarea id="remark" name="remark" rows="4" cols="50"></textarea></td>
+					    </tr>
+					</table>
+					<div align="center"><input type="submit" value="Submit"></div>
 				</fieldset>
 			</form>
-	</div>
-	<div class="expense">
-		<form class="expense">
-			<fieldset><legend>Add Expense</legend>
-				<table width="500" border="0" cellspacing="0" cellpadding="0">
-					<th></th>
-					<tr>
-					<td><label> Transcation Id </label><br><br></td>
-					<td><input type="number" name="transactionid" size="15" required /></td>
-					</tr>
-					<tr>
-					<td><label> UID </label></td>
-					<td><input type="number" name="uid" size="15" required /><br></br></td>
-					</tr>
-					<tr>
-					<td><label> Amount </label></td>
-					<td><input type="number" name="amount" size="15" required /><br></br></td>
-					<tr>
-					<td><label> Source </label></td>
-					<td><input type="text" name="source" size="15" required /><br></br></td>
-					</tr>
-				</table>
-					<label><span> </span><input type="submit" value="Submit" /></label><br></br>
-			</fieldset>
-		</form>
-	</div>
+		</div>
+		<div class="expenseAdd">
+			<form>
+				<fieldset>
+				  	<table>
+					    <legend>Add Expense</legend>
+					    <tr>
+					    	<th><label for="exp">Expense:</label></th>
+					    	<td><input type="number" id="exp" name="exp"></td>
+						</tr>
+						<tr>
+					    	<th><label for="date">Date:</label></th>
+					    	<td><input type="date" id="dateExp" name="date"></td>
+					    </tr>
+					    <tr>
+					    	<th><label for="source">Source:</label></th>
+					    	<td><input type="text" id="source" name="source"></td>
+					    </tr>
+					    <tr>
+					    	<th><label for="remark">Remark:</label></th>
+					    	<td><textarea id="remark" name="remark" rows="4" cols="50"></textarea></td>
+					    </tr>
+					</table>
+					<div align="center"><input type="submit" value="Submit"></div>
+				</fieldset>
+			</form>
+		</div>
+	</main>
 </body>
 </html>
