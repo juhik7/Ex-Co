@@ -20,14 +20,3 @@ function weekly(){
 function monthly(){
     display(100,"MONTHLY INCOME",20000);
 }
-$(".meter > span").each(function () {
-  $(this)
-    .data("origWidth", $(this).width())
-    .width(0)
-    .animate(
-      {
-        width: $(this).data("origWidth")
-      },
-      1200
-    );
-});
