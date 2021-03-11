@@ -3,15 +3,22 @@
   width: 45%;
   vertical-align: center;
   margin-top: 40px;
-  padding: 20px;
+  padding: 50px;
   border-radius: 70%;
-  background: linear-gradient(to right, #ffffee 0%,#0097ff 100%); 
+  background: linear-gradient(to right,#ddd6f3
+  20%,#faaca8
+  80%); 
   
 } 
-.container {  
+#box_making_2{
+
+}
+.container_1{  
   padding: 50px;  
   background-color:#75e6da ;  
-  border-radius: 70%;
+  background: linear-gradient(to right,#ddd6f3
+  20%,#faaca8
+  80%);
 }  
 .form{
   font-family: sans-serif;
