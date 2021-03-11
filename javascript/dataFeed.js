@@ -1,9 +1,9 @@
-
-function a(e){
-	e.stopPropagation();
-	var1=document.getElementById('inc');
-	if (var1<0)
-		alert("Income can not be negative");
+function a(){
+	income = document.getElementById("inc").value;
+	if(income<0){
+		alert("Income Can't Be Negative");
+	}
+	console.log("This Function Has Been Called");
 }
 function b(e){
 	e.stopPropagation();
