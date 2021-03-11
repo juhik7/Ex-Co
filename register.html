@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
 	<link rel="stylesheet" type="text/css" href="css/log_in.css">
+	<script src="javascript/register.js"></script>
 	<style type="text/css">
 		@font-face {
   			font-family: exco;
@@ -44,36 +45,37 @@
     <li><a href='register.html' data-item='REGISTER'>REGISTER</a></li>
   </ul>
 </nav>
-  <div class="container">  
-<form class="form">  
-  <center>  <h1> EX-CO Registeration Form</h1> </center>  
-  <hr>  
-<label> Firstname </label>   
-<input type="text" name="firstname" placeholder= "Firstname" size="15" required />   
-<label> Middlename: </label>   
-<input type="text" name="middlename" placeholder="Middlename" size="15" required />   
-<label> Lastname: </label>    
-<input type="text" name="lastname" placeholder="Lastname" size="15"required />   
-<label> Gender :
+<div class="container">  
+<div id="adviceBox"></div>
+<form class="form" action="">  
+<center><h1 style="font: Eras Bold ITC;"> EX-CO Registeration Form</h1></center>  
+<hr>  
+<label>User name</label>   
+<input type="text" placeholder="#abc" size="15" id="UserName" />
+<label>Name </label>   
+<input type="text" placeholder="Full Name" size="15" id="Name" />   
+<label>Gender :
 <input type="radio" value="Male" name="gender" checked > Male   
 <input type="radio" value="Female" name="gender"> Female   
 <input type="radio" value="Other" name="gender"> Other  
 </label><br>
-<label> Type: 
-<input type="radio" value="adult" name="type" checked > Adult <span style="color: red;">25+</span><input type="radio" value="kids" name="type"> Kids  
+<label>Type: 
+<input type="radio" value="adult" name="type" checked > Adult <span style="color: red;">25+</span>
+<input type="radio" value="kids" name="type"> Kids  
 </label><br> 
-<label> Phone : </label> 
-<input type="text" name="phone" placeholder="phone no." size="10"/ required>   
-<label>Current Address :</label>  
-<textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
-</textarea>  
+<label>Phone : </label> 
+<input type="text" name="phone" id="phn" placeholder="phone no." size="10" required>   
+<label>Current Address </label>  
+<textarea cols="80" rows="5" placeholder="Current Address" required> </textarea>  
 <label for="email">Email</label>  
-<input type="text" placeholder="Enter Email" name="email" required>  
+<input type="text" id="Email" placeholder="abc@domain.com" />
 <label for="psw">Password</label>  
-<input type="password" placeholder="Enter Password" name="psw" required>  
+<input type="password" placeholder="Enter Password" id="pass" />  
 <label for="psw-repeat">Re-type Password</label>  
-<input type="password" placeholder="Retype Password" name="psw-repeat" required>  
-<button type="submit" class="registerbtn"><a href="expense.html"> Register</button>    
-</div></form>
+<input type="password" placeholder="Retype Password" id="cpass"/>  
+<button type="submit" class="registerbtn"><a href="expense.html" onclick=validate()> Register
+</button>   
+</div>
+</form>
 </body>
 </html>

@@ -1,7 +1,3 @@
-body{  
-  font-family: sans-serif;  
-  
-}  
 #box_making { 
   display: inline-block;
   width: 45%;
@@ -18,6 +14,7 @@ body{
   border-radius: 70%;
 }  
 .form{
+  font-family: sans-serif;
   max-width: 40%;
   margin: 0 auto;
   display: flex;
