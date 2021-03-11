@@ -15,3 +15,12 @@
 	text-align: center;
 	align-content: center;
 }
+.expense{
+  padding: 12px 30px;
+  border: 0;
+  background: linear-gradient(to right, #de48b5 0%,#0097ff 100%); 
+  border-radius: 3px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 0 auto;
+}
