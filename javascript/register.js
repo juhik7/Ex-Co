@@ -71,8 +71,8 @@ if (name==null || name==""){
 }
 
 function validate(){
-  chkPasswords();
-  chkPhone();
-  chkEmail();
   chkUserName();
+  chkEmail();
+  chkPhone();
+  chkPasswords();
 }
