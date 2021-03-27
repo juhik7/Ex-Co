@@ -11,7 +11,7 @@ function display(prog,heading,cost,color) {
   document.getElementById("amt").innerHTML = "Rs "+cost;
 }
 function budget(){
-  var budget = -5000;
+  var budget = +5000;
   var color;
   if(budget>=0){
     document.getElementsByTagName("head")[0].insertAdjacentHTML(

@@ -5,8 +5,6 @@
   padding: 50px;
   padding-top: 90px;
   padding-bottom: 90px;
-  border-radius: 50%;
-  background:  linear-gradient(to right,#ddd6f3 20%,#faaca8 80%); 
   border: 2px solid black;
   transition: border-width 0.6s linear;
 }
@@ -79,7 +77,6 @@ hr {
   color: white; 
 }  
 .logBack{
-  background: url("https://media.giphy.com/media/l44QkcgKIwjdIBvs4/giphy.gif");
   align-content: center;
   width: 100%;
   text-align: center;

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Income/Expense</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/login2.css">
+	<style type="text/css">
+		@font-face {
+  			font-family: exco;
+  			src: url(fontFiles/Revamped.ttf);
+		}
+		@font-face {
+  			font-family: money;
+  			src: url(fontFiles/Money.ttf);
+		}
+		@font-face {
+  			font-family: RocknRoll;
+  			src: url(fontFiles/RocknRoll.ttf);
+		}
+		body{
+			overflow-x: hidden;
+		}
+	</style>
+</head>
+<body style="background-color: #f4eae6;">
+	<iframe src="header.html" width="102%" style="margin: -10px; overflow-y: hidden;" height="265px" frameborder="0"></iframe>
+	<div class="newcont">
+		<h2>#ExCo: Add Income/Expense Form</h2>
+		<div class="container" id="container">
+			<div class="form-container sign-up-container">
+				<form action="#">
+					<h1>Add Income</h1>
+					<span>enter information about the money earned</span>
+					<input type="number" name="income" placeholder="Enter Income" required />
+					<input type="date" name="date" placeholder="Enter Date" required />
+					<input type="text" name="source" placeholder="Enter Source" required />
+					<textarea name="remark" placeholder="Enter Remark"></textarea>
+					<button>Submit</button>
+				</form>
+			</div>
+			<div class="form-container sign-in-container">
+				<form action="#">
+					<h1>Add Expense</h1>
+					<span>enter information about the expenditure</span>
+					<input type="number" name="expense" placeholder="Enter Expense" required />
+					<input type="date" name="date" placeholder="Enter Date" required />
+					<input type="text" name="source" placeholder="Enter Source" required />
+					<textarea name="remark" placeholder="Enter Remark"></textarea>
+					<button>Submit</button>
+				</form>
+			</div>
+			<div class="overlay-container">
+				<div class="overlay">
+					<div class="overlay-panel overlay-left">
+						<h1>Hello, User!</h1>
+						<p>To enter expense please click on the button below</p>
+						<button class="ghost" id="addExpense">Add Expense</button>
+					</div>
+					<div class="overlay-panel overlay-right">
+						<h1>Hello, User!</h1>
+						<p>To enter income please click on the button below</p>
+						<button class="ghost" id="addIncome">Add Income</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p>
+			Developed <i class="fa fa-heart"></i> by Atishay Jain, Juhi Kumari, Tushar
+		</p>
+	</footer>
+<script src="javascript/incexp.js"></script>
+</body>
+</html>
