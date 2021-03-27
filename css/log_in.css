@@ -81,6 +81,7 @@ hr {
   width: 100%;
   text-align: center;
 }
+<<<<<<< Updated upstream
 .newCont{
   background: linear-gradient(to right,#ddd6f3 20%,#faaca8 80%);
   margin-top: 50px;
@@ -93,3 +94,6 @@ hr {
   border: 2px solid black;
   overflow: hidden;
 }
+=======
+}
+>>>>>>> Stashed changes

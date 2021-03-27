@@ -72,7 +72,14 @@ if (name==null || name==""){
 
 function validate(){
   chkUserName();
+<<<<<<< Updated upstream
   chkEmail();
   chkPhone();
   chkPasswords();
+=======
+  chkPhone();
+  chkEmail();
+  chkPasswords();
+  
+>>>>>>> Stashed changes
 }
