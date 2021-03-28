@@ -1,3 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+  box-sizing: border-box;
+}
+
 .div1{
 	display: inline-block;
 	width: 45%;
@@ -7,7 +14,7 @@
 	padding: 10px;
 	border: 4px solid black;
 	border-radius: 20px;
-	background-color: #d4f1f4;
+  background: linear-gradient(45deg, #189ab4 ,#d4f1f4 60%);
 }
 .st1{
 	font-family: money;
