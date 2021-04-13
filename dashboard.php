@@ -1,3 +1,10 @@
+<?php
+require 'includes/auth.php';
+session_start();
+if (! isLoggedIn()){
+	die("ACCESS DENIED");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +36,7 @@
 	</style>
 </head>
 <body style="background-color: #f4eae6;">
-	<iframe src="header.html" width="102%" style="margin: -10px; overflow-y: hidden;" height="265px" frameborder="0"></iframe>
+	<iframe src="header.php" width="102%" style="margin: -10px; overflow-y: hidden;" height="265px" frameborder="0"></iframe>
 	<aside class="sidebar">
 		
 		<div class="svg-wrapper">

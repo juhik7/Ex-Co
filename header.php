@@ -1,3 +1,7 @@
+<?php
+session_start();
+require 'includes/auth.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,10 +41,23 @@
 	</header>
 	<nav>
 	  <ul class="menuItems" style="margin-left: 120px;">
-	    <li><a href='index.html' data-item='HOME' target="_parent">HOME</a></li>
-	    <li><a href='dashboard.html' data-item='DASHBOARD' target="_parent">DASHBOARD</a></li>
-	    <li><a href='incexp.html' data-item='INCOME/EXPENSE' target="_parent">INCOME/EXPENSE</a></li>
-	    <li><a href='logreg.html' data-item='LOGIN/REGISTER' target="_parent">LOGIN/REGISTER</a></li>
+	    <li><a href='index.php' data-item='HOME' target="_parent">HOME</a></li>
+	    <?php if (isLoggedIn()): ?>
+	    <li><a href='dashboard.php' data-item='DASHBOARD' target="_parent">DASHBOARD</a></li>
+	    <?php endif; ?>
+	    <?php if (isLoggedIn()): ?>
+	    <li><a href='incexp.php' data-item='INCOME/EXPENSE' target="_parent">INCOME/EXPENSE</a></li>
+	    <?php endif; ?>
+	    <?php if (isLoggedIn()): ?>
+	    	
+    		<li><a href='logout.php' data-item='LOGOUT' target="_parent">LOGOUT</a>
+    		<span style="color: white;margin-left: 10px;">
+	    	<?php echo "(".$_COOKIE["user"].")"; ?>
+	    	</span></li>
+		<?php else: ?>
+	    	<li><a href='logreg.php' data-item='LOGIN/REGISTER' target="_parent">LOGIN/REGISTER</a></li>
+	    <?php endif; ?>
+
 	  </ul>
 	</nav>
 </body>

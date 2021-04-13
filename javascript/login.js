@@ -10,9 +10,8 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
 
-
 function checkAGE(){
-	var ageField=document.getElementById("age");
+	var ageField=document.getElementById("rage");
 	var age = ageField.value;
 	if (age>=13) {
 		ageField.setCustomValidity("");
@@ -34,6 +33,7 @@ function checkPASS(){
 	}
 }
 
+
 function checkCPASS(){
 	var passField = document.getElementById("rpass");
 	var passCField = document.getElementById("rcpass");
@@ -44,7 +44,10 @@ function checkCPASS(){
 	}
 }
 window.onload = function () {
-    document.getElementById("age").oninput = checkAGE;
+    document.getElementById("rage").oninput = checkAGE;
     document.getElementById("rpass").oninput = checkPASS;
     document.getElementById("rcpass").oninput = checkCPASS;
+    document.getElementById("rage").onchange = checkAGE;
+    document.getElementById("rpass").onchange = checkPASS;
+    document.getElementById("rcpass").onchange = checkCPASS;
 }

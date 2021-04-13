@@ -1,3 +1,9 @@
+<?php
+require 'classes/Database.php';
+session_start();
+$db = new Database();
+$conn = $db->getConn();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +32,7 @@
 	</style>
 </head>
 <body style="background-color: #f4eae6;">
-	<iframe src="header.html" width="102%" style="margin: -10px; overflow-y: hidden;" height="265px" frameborder="0"></iframe>
+	<iframe src="header.php" width="102%" style="margin: -10px; overflow-y: hidden;" height="265px" frameborder="0"></iframe>
 	<div class="div1">
 		<h1 style="text-align: center;" class="st1">EXPENSE CONTROLLER SYSTEM</h1>
 		<p class="ps1">Expense Controller System is a system which will keep a track of Income-Expense of a House on a day to day basis. This System takes Income from House and divides in daily expense allowed, If you exceed that day's expense it will cut it from your income and give new daily expense allowed amount, and if that day's expense is less it will add it in savings. Expense Controller System will generate report at the end of month to show Income-Expense Curve. It will let you add the savings amount which you had saved for some particular Festivals or day like Birthday or Anniversary.</p>
