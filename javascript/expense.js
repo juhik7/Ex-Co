@@ -8,15 +8,19 @@ function display(prog,heading,cost) {
   document.getElementById("head").innerHTML = heading;
   document.getElementById("amt").innerHTML = "Rs "+cost;
 }
-function today(){
-    display(25,"TODAY'S EXPENSE",5000);
+function today(expense,perc){
+  var setExp = parseInt(expense);
+  display(perc,"TODAY'S EXPENSE",setExp);
 }
-function yesterday(){
-    display(12,"YESTERDAY'S EXPENSE",2500);
+function yearly(expense,perc){
+  var setExp = parseInt(expense);
+  display(perc,"YEARLY EXPENSE",setExp);
 }
-function weekly(){
-    display(50,"WEEKLY EXPENSE",10000);
+function weekly(expense,perc){
+  var setExp = parseInt(expense);
+  display(perc,"WEEKLY EXPENSE",setExp);
 }
-function monthly(){
-    display(100,"MONTHLY EXPENSE",20000);
+function monthly(expense,perc){
+  var setExp = parseInt(expense);
+  display(perc,"MONTHLY EXPENSE",setExp);
 }

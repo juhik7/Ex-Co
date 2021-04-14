@@ -10,8 +10,8 @@ function display(prog,heading,cost,color) {
   document.getElementById("head").innerHTML = heading;
   document.getElementById("amt").innerHTML = "Rs "+cost;
 }
-function budget(){
-  var budget = +5000;
+function budget(bud){
+  var budget = parseInt(bud);
   var color;
   if(budget>=0){
     document.getElementsByTagName("head")[0].insertAdjacentHTML(
@@ -24,5 +24,5 @@ function budget(){
     "<link rel=\"stylesheet\" href=\"css/expense.css\" />");
     color="red";
   }
-  display(75,"BUDGET",budget,color);
+  display(100,"BUDGET",budget,color);
 }

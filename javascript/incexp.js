@@ -21,6 +21,7 @@ function checkINCOME(){
 
 function checkIDATE(){
 	var dateField = document.getElementById("idate");
+	console.log(dateField.value());
 	var splitDate = dateField.value.split("-");
 	var cdate = new Date();
 	var cmonth = cdate.getMonth() + 1;
@@ -61,5 +62,6 @@ window.onload = function () {
     document.getElementById("income").oninput = checkINCOME;
     document.getElementById("expense").oninput = checkEXPENSE;
     document.getElementById("idate").oninput = checkIDATE;
+    document.getElementById("idate").onchange = checkIDATE;
     document.getElementById("edate").oninput = checkEDATE;
 }

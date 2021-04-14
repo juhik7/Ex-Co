@@ -1,39 +1,41 @@
 <?php
+require 'classes/Database.php';
+require 'classes/Entry.php';
 session_start();
-//Initialising Variables
-
-$name = "";
-$email = "";
-
-$errors = array();
-
-//Connect Database
-
-$db = mysqli_connect('localhost','root','','exco') or die("Couldn't Connect To Database");
-//Register User
-
-$name = mysqli_real_escape_string($db,$_POST['rname']);
-$email = mysqli_real_escape_string($db,$_POST['remail']);
-$password = mysqli_real_escape_string($db,$_POST['rpass']);
-$age = mysqli_real_escape_string($db,$_POST['rage']);
-
-//Check DB for existing Users
-
-$user_check_query = "SELECT * FROM  users WHERE name = '$name' or email = '$email' LIMIT 1";
-$results = mysqli_query($db,$user_check_query);
-$user = mysqli_fetch_assoc($results);
-if($user){
-	if($user['name'] === $name){
-		array_push($errors, "name already registered");
-	}
-	if($user['email'] === $email){
-		array_push($errors, "E-Mail already registered");
-	}
-}
-
-//Register The User If No Error
-
-if(count($errors)==0){
-	
-}
+$today = date("Y-m-d");
+$yesterday = date("Y-m-d", strtotime("-1 day"));
+$tommorow = date("Y-m-d", strtotime("+1 day"));
+$prev_week = date("Y-m-d", strtotime("-1 month"));
+$prev_year = date("Y-m-d", strtotime("-1 year"));
+$now = time();
+$your_date = strtotime($prev_week);
+$datediff = floor(($now - $your_date)/(60 * 60 * 24));
+echo "$today <br />";
+echo "$tommorow <br />";
+echo "$yesterday <br />";
+echo "$prev_week <br />";
+echo "$prev_year <br />";
+$db = new Database();
+$conn = $db->getConn();
+$entries = Entry::getExpEntry($conn,$_COOKIE["user"],$prev_year);
+$entries_2 = Entry::getExpEntry($conn,$_COOKIE["user"],$prev_week);
+$total_1 = Entry::getTotal($entries);
+$total_2 = Entry::getTotal($entries_2);
+$first_day_this_month = date('Y-m-01');
+$today_perc = min(abs(round(($_SESSION["inc_t"]/$_SESSION["bud"])*100)),100);
+$weekly_perc = min(abs(round(($_SESSION["inc_w"]/$_SESSION["bud"])*100)),100);
+$month_perc = min(abs(round(($_SESSION["inc_m"]/$_SESSION["bud"])*100)),100);
+$yearly_perc = min(abs(round(($_SESSION["inc_y"]/$_SESSION["bud"])*100)),100);
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<?php echo $_SESSION["bud"]."<br>" ?>
+<?php echo $today_perc."<br>" ?>
+<?php echo $weekly_perc."<br>" ?>
+<?php echo $yearly_perc."<br>" ?>
+</body>
+</html>

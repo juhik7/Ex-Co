@@ -4,6 +4,8 @@ session_start();
 if (! isLoggedIn()){
 	die("ACCESS DENIED");
 }
+require 'includes/setVariables.php';
+setVar();
 ?>
 <!DOCTYPE html>
 <html>

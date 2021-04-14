@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="css/incexp.css">
 	<script src="javascript/budget.js"></script>
 </head>
-<body style="background-color: #f4eae6;" onload="budget()">
+<body style="background-color: #f4eae6;" onload="budget(<?php echo $_SESSION["bud"] ?>)">
 	<h1 id="head" class="heading"></h1>
 	<h1 id="amt" class="money"></h1>
 	<div id="bar"></div>

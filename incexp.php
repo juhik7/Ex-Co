@@ -38,36 +38,40 @@ if (! isLoggedIn()){
 		<h2>#ExCo: Add Income/Expense Form</h2>
 		<div class="container" id="container">
 			<div class="form-container sign-up-container">
-				<form action="#">
+				<form action="income_feed.php" method="POST">
 					<h1>Add Income</h1>
 					<span>enter information about the money earned</span>
 					<input id="income" type="number" name="income" placeholder="Enter Income" required />
-					<input type="date" id="idate" name="date" placeholder="Enter Date" required />
-					<input type="text" name="source" placeholder="Enter Source" required />
-					<textarea name="remark" placeholder="Enter Remark"></textarea>
+					<input type="date" id="idate" name="idate" placeholder="Enter Date" required />
+					<input type="text" id="isource" name="isource" placeholder="Enter Source" required />
+					<textarea id="iremark" name="iremark" placeholder="Enter Remark"></textarea>
 					<button>Submit</button>
 				</form>
 			</div>
 			<div class="form-container sign-in-container">
-				<form action="#">
+				<form action="expense_feed.php" method="POST">
 					<h1>Add Expense</h1>
 					<span>enter information about the expenditure</span>
 					<input type="number" id="expense" name="expense" placeholder="Enter Expense" required />
-					<input type="date" id="edate" name="date" placeholder="Enter Date" required />
-					<input type="text" name="source" placeholder="Enter Source" required />
-					<textarea name="remark" placeholder="Enter Remark"></textarea>
+					<input type="date" id="edate" name="edate" placeholder="Enter Date" required />
+					<input type="text" id="esource" name="esource" placeholder="Enter Source" required />
+					<textarea id="eremark" name="eremark" placeholder="Enter Remark"></textarea>
 					<button>Submit</button>
 				</form>
 			</div>
 			<div class="overlay-container">
 				<div class="overlay">
 					<div class="overlay-panel overlay-left">
-						<h1>Hello, User!</h1>
+						<h1>Hello,
+							<?php echo " ".$_COOKIE["user"];?>
+						</h1>
 						<p>To enter expense please click on the button below</p>
 						<button class="ghost" id="addExpense">Add Expense</button>
 					</div>
 					<div class="overlay-panel overlay-right">
-						<h1>Hello, User!</h1>
+						<h1>Hello,
+							<?php echo " ".$_COOKIE["user"];?>
+						</h1>
 						<p>To enter income please click on the button below</p>
 						<button class="ghost" id="addIncome">Add Income</button>
 					</div>
