@@ -1,9 +1,9 @@
 <?php
 session_start();
-$today_perc = min(abs(round(($_SESSION["sav_t"]/$_SESSION["bud"])*100)),100);
-$weekly_perc = min(abs(round(($_SESSION["sav_w"]/$_SESSION["bud"])*100)),100);
-$month_perc = min(abs(round(($_SESSION["sav_m"]/$_SESSION["bud"])*100)),100);
-$yearly_perc = min(abs(round(($_SESSION["sav_y"]/$_SESSION["bud"])*100)),100);
+$today_perc = min(abs(round(($_SESSION["sav_t"]/$_SESSION["bud_t"])*100)),100);
+$weekly_perc = min(abs(round(($_SESSION["sav_w"]/$_SESSION["bud_w"])*100)),100);
+$month_perc = min(abs(round(($_SESSION["sav_m"]/$_SESSION["bud_m"])*100)),100);
+$yearly_perc = min(abs(round(($_SESSION["sav_y"]/$_SESSION["bud_y"])*100)),100);
 ?>
 <!DOCTYPE html>
 <html>

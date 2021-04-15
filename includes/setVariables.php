@@ -57,7 +57,10 @@ function setVar(){
 	$all_sav_total = $all_inc_total-$all_exp_total;
 	$budget = round(($all_sav_total-$monthly_sav_total)/12);
 	$budget = round($budget+$monthly_sav_total);
-	$_SESSION["bud"] = $budget;
+	$_SESSION["bud_t"] = round($budget/28);
+	$_SESSION["bud_m"] = $budget;
+	$_SESSION["bud_w"] = round($budget/4);
+	$_SESSION["bud_y"] = $budget*12;
 }
 
 ?>

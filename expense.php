@@ -1,9 +1,9 @@
 <?php
 session_start();
-$today_perc = min(abs(round(($_SESSION["exp_t"]/$_SESSION["bud"])*100)),100);
-$weekly_perc = min(abs(round(($_SESSION["exp_w"]/$_SESSION["bud"])*100)),100);
-$month_perc = min(abs(round(($_SESSION["exp_m"]/$_SESSION["bud"])*100)),100);
-$yearly_perc = min(abs(round(($_SESSION["exp_y"]/$_SESSION["bud"])*100)),100);
+$today_perc = min(abs(round(($_SESSION["exp_t"]/$_SESSION["bud_t"])*100)),100);
+$weekly_perc = min(abs(round(($_SESSION["exp_w"]/$_SESSION["bud_w"])*100)),100);
+$month_perc = min(abs(round(($_SESSION["exp_m"]/$_SESSION["bud_m"])*100)),100);
+$yearly_perc = min(abs(round(($_SESSION["exp_y"]/$_SESSION["bud_y"])*100)),100);
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,6 +31,7 @@ $yearly_perc = min(abs(round(($_SESSION["exp_y"]/$_SESSION["bud"])*100)),100);
 	<h1 id="head" class="heading"></h1>
 	<h1 id="amt" class="money"></h1>
 	<div id="bar"></div>
+	<div id="link" style="visibility: hidden; padding-bottom: 10px;"> <a href="#" target="_blank" id="myAnchor">see details --></a></div>
 	<span style="text-align: center;"><button class="button" onclick='today(<?php echo $_SESSION["exp_t"].",".$today_perc ?>)'><span>Today's Expense </span></button></span>
 	<span style="text-align: center;"><button class="button" onclick="weekly(<?php echo $_SESSION["exp_w"].",".$weekly_perc ?>)"><span>Weekly Expense </span></button></span><br>
 	<span style="text-align: center;"><button class="button" onclick="monthly(<?php echo $_SESSION["exp_m"].",".$month_perc ?>)"><span>Monthly Expense </span></button></span>
