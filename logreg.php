@@ -1,3 +1,10 @@
+<?php
+require 'includes/auth.php';
+session_start();
+if (isLoggedIn()){
+	die("ALREADY LOGGED IN");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +55,6 @@
 					<span>or use your account</span>
 					<input type="email" id="email" name="email" placeholder="E-Mail"required>
 					<input type="password" id="lpass" name="lpass" placeholder="Password" required />
-					<a href="#">Forgot your password?</a>
 					<button name="log_user">Sign In</button>
 				</form>
 			</div>

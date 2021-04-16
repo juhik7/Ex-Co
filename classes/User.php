@@ -57,8 +57,6 @@ class User
 	            $stmt->bindValue(':password', $this->password, PDO::PARAM_STR);
 	            $stmt->bindValue(':email', $this->email, PDO::PARAM_STR);
 	            $stmt->bindValue(':age', $this->age, PDO::PARAM_INT);
-
-	            $user_check_query = "SELECT * FROM  users WHERE name = :username or email = :email LIMIT 1";
 	            if ($stmt->execute()) {
 	                $this->id = $conn->lastInsertId();
 	                return true;

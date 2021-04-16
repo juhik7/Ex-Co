@@ -11,10 +11,10 @@ function setVar(){
 	$db = new Database();
 	$conn = $db->getConn();
 	//INCOME ENTRIES
-	$today_inc_entries = Entry::getIncEntry($conn,$_COOKIE["user"],$today);
-	$weekly_inc_entries = Entry::getIncEntry($conn,$_COOKIE["user"],$prev_week);
-	$monthly_inc_entries = Entry::getIncEntry($conn,$_COOKIE["user"],$prev_month);
-	$yearly_inc_entries = Entry::getIncEntry($conn,$_COOKIE["user"],$prev_year);
+	$today_inc_entries = Entry::getIncEntry($conn,$_SESSION['user'],$today);
+	$weekly_inc_entries = Entry::getIncEntry($conn,$_SESSION['user'],$prev_week);
+	$monthly_inc_entries = Entry::getIncEntry($conn,$_SESSION['user'],$prev_month);
+	$yearly_inc_entries = Entry::getIncEntry($conn,$_SESSION['user'],$prev_year);
 	//INCOME TOTAL
 	$today_inc_total = Entry::getTotal($today_inc_entries);
 	$_SESSION["inc_t"] = $today_inc_total;
@@ -25,10 +25,10 @@ function setVar(){
 	$yearly_inc_total = Entry::getTotal($yearly_inc_entries);
 	$_SESSION["inc_y"] = $yearly_inc_total;
 	//EXPENSE ENTRIES
-	$today_exp_entries = Entry::getExpEntry($conn,$_COOKIE["user"],$today);
-	$weekly_exp_entries = Entry::getExpEntry($conn,$_COOKIE["user"],$prev_week);
-	$monthly_exp_entries = Entry::getExpEntry($conn,$_COOKIE["user"],$prev_month);
-	$yearly_exp_entries = Entry::getExpEntry($conn,$_COOKIE["user"],$prev_year);
+	$today_exp_entries = Entry::getExpEntry($conn,$_SESSION['user'],$today);
+	$weekly_exp_entries = Entry::getExpEntry($conn,$_SESSION['user'],$prev_week);
+	$monthly_exp_entries = Entry::getExpEntry($conn,$_SESSION['user'],$prev_month);
+	$yearly_exp_entries = Entry::getExpEntry($conn,$_SESSION['user'],$prev_year);
 	//EXPENSE TOTAL
 	$today_exp_total = Entry::getTotal($today_exp_entries);
 	$_SESSION["exp_t"] = $today_exp_total;
@@ -50,8 +50,8 @@ function setVar(){
 	$_SESSION["sav_y"] = $yearly_sav_total;
 
 	//BUDGET CALCULATION
-	$all_inc_entries = Entry::getIncEntry($conn,$_COOKIE["user"],$vprv_year);
-	$all_exp_entries = Entry::getExpEntry($conn,$_COOKIE["user"],$vprv_year);
+	$all_inc_entries = Entry::getIncEntry($conn,$_SESSION['user'],$vprv_year);
+	$all_exp_entries = Entry::getExpEntry($conn,$_SESSION['user'],$vprv_year);
 	$all_inc_total = Entry::getTotal($all_inc_entries);
 	$all_exp_total = Entry::getTotal($all_exp_entries);
 	$all_sav_total = $all_inc_total-$all_exp_total;
